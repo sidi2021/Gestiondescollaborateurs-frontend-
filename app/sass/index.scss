@@ -1,0 +1,376 @@
+$color1:#0696FF;
+$color2:#FFFFFF;
+$color3:#F9F9FB;
+
+@font-face {
+	font-family: 'Raleway-Regular';
+	src: url('../font/static/Raleway-Regular.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: darkgrey;
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+}
+
+body, html {
+	width: 100%;
+	height:  100%;
+} 
+
+body {
+	font-family: Raleway-Regular;
+	background-color: $color2;
+}
+
+
+div.container {
+	width: 100%;
+	height:  100%;
+	background-color: $color2;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	grid-gap: 10px;
+}
+
+nav {
+	grid-column-start:1;
+	grid-column-end:13;
+	grid-row-start:1;
+	grid-row-end:2;
+	box-shadow: 0 0px 5px 0  #000000;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	padding: 10px;
+}
+
+aside {
+	transition: all 0.5s ease-out;
+	position: absolute;
+	left: -300px;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 300px;
+	background-color: white;
+	overflow-y: auto;
+	box-shadow: 0;
+}
+
+main {
+	grid-column-start:1;
+	grid-column-end:13;
+	grid-row-start:2;
+	grid-row-end:11;
+	background-color: white;
+	padding: 50px 100px;
+}
+
+footer {
+	grid-column-start:1;
+	grid-column-end:13;
+	grid-row-start:11;
+	grid-row-end:13;
+	background-color: $color1;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	color: $color2;
+	span {
+		color: white;
+		font-size: 10pt;
+	}
+}
+
+
+div.main-container {
+	width: 100%;
+	height:  100%;
+	background-color: $color2;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	grid-gap: 10px;
+	box-shadow: 0px 0px 5px #000000;
+	border-radius: 5px;
+}
+
+
+div.control-div {
+	grid-column-start:1;
+	grid-column-end:4;
+	grid-row-start:1;
+	grid-row-end:13;
+	background-color: $color1;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+div.display-div {
+	grid-column-start:4;
+	grid-column-end:13;
+	grid-row-start:1;
+	grid-row-end:13;
+	background-color: $color2;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+ul.controlMenu{
+	display: block;
+	list-style: none;
+}
+
+li.controlItem{
+	margin: 40px;
+}
+
+a.controlItemLink{
+	width: 200px;
+	text-decoration: none;
+	background-color: $color2;
+	color: $color1;
+	padding: 10px 30px;
+	font-family: Raleway-Regular;
+	min-width: 200px;
+	border-radius: 5px;
+}
+
+ul.menu {
+	display: inline;
+	list-style: none;
+}
+
+
+li.menuItem {
+	display: inline;
+	list-style: none;
+	margin-right: 25px;
+	float: right;
+	margin-top: 7px;
+}
+
+li.menuItem.menuButton {
+	float: left;
+	margin-top: 7px;
+	cursor: pointer;
+	vertical-align:middle;
+}
+
+li.menuItem.searchInput {
+	float: left;
+	margin-top: 7px;
+	vertical-align:middle;
+}
+
+li.menuItem.searchInput input{
+	width: 500px;
+	height: 40px;
+	padding: 2px 15px;
+}
+
+li.menuItem.logo {
+	margin-top: 1px;
+}
+
+li.menuItem.logout {
+	margin-top: 1px;
+	margin-right: 30px;
+}
+
+a.menuItemLink {
+	color: #007FFF;
+	font-weight: 500;
+	text-decoration: none;
+	font-family: Raleway-Regular;
+}
+
+div.searchInput-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $color2;
+	border-radius: 5px;
+	padding: 0px 5px;
+	box-shadow: 0px 0px 3px #000000;
+}
+
+span.menuButtonBrand{
+	background-color: grey;
+	display: block;
+	width: 30px !important;
+	height: 5px !important;
+	margin: 4px;
+	border-radius: 2px;
+	transition: all 0.5s;
+}
+
+img {
+	margin-top: 7px;
+	vertical-align: middle;
+}
+
+
+ul.asideMenu {
+	list-style: none;
+	margin-top: 10px !important;
+	padding:20px;
+}
+
+li.asideButton {
+	float: right;
+	position: relative;
+	top:0;
+}
+
+span.closeBrand {
+	background-color: grey;
+	display: block;
+	width: 30px !important;
+	height: 5px !important;
+	margin: 4px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+span.closeBrandRight {
+	transform: rotate(-45deg) translate(1px, -6.5px);
+}
+
+span.closeBrandLeft {
+	transform: rotate(45deg) translate(0px, 6px);
+}
+
+li.asideItem {
+	padding: 8px;
+	background-color: rgba(6, 150, 255, 1.0);
+	margin-top: 10px;
+	border-radius: 3px;
+	box-shadow: 0 0 7px 0  rgba(6, 150, 255, 0.5);
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
+a.asideItemLink {
+	text-decoration: none;
+	text-align: center;
+	color: $color2;
+	font-weight: 500;
+}
+a.asideItemLink:hover {
+	color: $color3;
+}
+
+
+form.form-group {
+	padding: 100px calc(30%);
+	width: 100%;
+}
+
+input.form-control {
+	width: 100%;
+	height: 40px;
+	border-radius: 7px;
+	border: 0.5px solid lightgray;
+	margin: 5px;
+	padding: 7px 10px;
+}
+
+input.btn-primary {
+	color: $color2;
+	background-color: $color1;
+	border-radius: 7px;
+	margin: 5px;
+	padding: 7px 10px;
+	width: 100%;
+	height: 40px;
+}
+
+button.search-btn {
+	background-color: $color2 !important;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	border-left: 1px solid lightgray;
+}
+
+@media only screen and(max-width: 769px) {
+	nav li{
+		display: block;
+	}
+
+	.searchInput {
+		width: 100px;
+	}
+
+	div.searchInput-container{
+		width: 200px;
+	}
+
+}
+
+
+
+@media only screen and(max-width: 1024px) {
+	div.control-div {
+	grid-column-start:1;
+	grid-column-end:13;
+	grid-row-start:1;
+	grid-row-end:3;
+	background-color: $color1;
+}
+
+div.display-div {
+	grid-column-start:1;
+	grid-column-end:13;
+	grid-row-start:3;
+	grid-row-end:13;
+	background-color: $color2;
+}
+
+ul.controlMenu li{
+	display: inline-block;
+	margin: 10px;
+}
+
+main {
+	padding: 50px 20px;
+}
+
+div.control-div {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+div.display-div {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+}
